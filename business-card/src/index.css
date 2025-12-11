@@ -1,0 +1,127 @@
+body{
+    background-color: #23252C;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card-wrapper {
+    width: 317px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.pfp{
+    width:317px;
+    height:317px;
+}
+
+.content{
+    background-color: #1A1B21;
+    width: 317px;
+    height: 399px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.email-icon{
+    width:18px;
+    height:18px;
+}
+
+h1{
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin: 0px;
+    font-size: 40px;
+}
+
+h2{
+    font-size: 14px;
+    color: #F3BF99;
+    font-family: "Inter", sans-serif;
+    margin: 20px 0 0 0;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 12px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    margin: 8px 0 16px 0;
+    font-weight: 400;
+}
+
+h3 > a{
+    text-decoration: none;
+    color: #d5d5d5;
+}
+
+.email-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 247px;
+    height: 34px;
+    background-color: #ebebeb;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+.about, .interests{
+    width: 247px;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    margin-top: 10px;
+}
+
+.about h2, .interests h2{
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.about p, .interests p{
+    font-size: 12px;
+    color: #D1D5DB;
+    margin-top: 4px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    
+}
+
+.interests{
+    margin-top: 0;
+}
+
+.FooterIcon{
+    background-color: #161619;
+    width: 317px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-img{
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+}
