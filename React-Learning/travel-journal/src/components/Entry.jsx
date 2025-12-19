@@ -2,6 +2,7 @@
 
 export default function Entry(props) {
  
+
    return (
      <>
 
@@ -16,7 +17,7 @@ export default function Entry(props) {
                 <h2>{props.country}</h2>
                 <a href={props.maps}>View on Google Maps</a>
             </div>
-            <h1>Mount Fuji</h1>
+            <h1>{props.title}</h1>
 
             <h4>{props.dates}</h4>
 

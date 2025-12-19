@@ -51,6 +51,7 @@ h3{
     height: 168px;
     margin-top: 24px;
     margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 .line-1{
@@ -62,7 +63,7 @@ h3{
 }
 
 .fuji{
-    height: 168px;
+    height: 150px;
     width: 125px;
     border-radius: 8px;
 }
