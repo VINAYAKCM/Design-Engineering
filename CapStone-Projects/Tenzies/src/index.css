@@ -68,8 +68,10 @@ main{
 }
 
 .roll-btn{
-    width: 92px;
-    height: 35px;
+    white-space: nowrap;
+    width: auto;
+    padding: 10px 20px;
+    height: 40px;
     font-family: "Karla";
     font-size: 18px;
     font-weight: 700;
