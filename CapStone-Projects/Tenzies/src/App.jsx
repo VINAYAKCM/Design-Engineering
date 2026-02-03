@@ -5,6 +5,7 @@ import React from "react"
 export default function App() {
 
   const [dieValue, setDieValue] = React.useState(generateAllNewDice())
+  const diceElements = dieValue.map(num => <Die value={num}/>)
   
   function generateAllNewDice(){
     const newDice = []
@@ -15,7 +16,14 @@ export default function App() {
     return newDice;
     }
   
-  const diceElements = dieValue.map(num => <Die value={num}/>)
+  
+    function rollDice(){
+      setDieValue(generateAllNewDice()) //So setDieValue is literally a function you call when
+                                        //you want to change the value of dieValue and generate
+                                        //returns the new random array since the generateAllNewDice
+                                        //returns as the output
+    }
+
 
   return (
     <>
@@ -23,6 +31,9 @@ export default function App() {
         <div className="die-container">
             {diceElements}
         </div>
+        <button className="roll-btn" onClick={rollDice}>
+          Roll
+        </button>
       </main>
     </>
   )
