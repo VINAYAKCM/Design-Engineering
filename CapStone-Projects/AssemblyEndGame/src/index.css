@@ -64,3 +64,30 @@ header > p {
   font-family: Karla;
   font-weight: 500;
 }
+
+.word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5px;
+    margin-top: 50px;
+}
+
+.letter{
+    background-color: #323232;
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+    border-bottom: #F9F4DA;
+    color: #F9F4DA;
+    font: Hanken Grotesk;
+    border-bottom: 1px solid #F9F4DA;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
