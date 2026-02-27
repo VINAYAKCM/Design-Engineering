@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import { languages } from '../languages'
+import clsx from "clsx"
 
 export default function App() {
 
-    const [currentWord, setCurrentWord] = useState("Blahblah")
+    const [currentWord, setCurrentWord] = useState("react")
     const [guessedLetter, setGuessedLetter] = useState([])
     console.log(guessedLetter)
 
@@ -19,12 +20,35 @@ export default function App() {
 
     //Keyboard:
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
-    const keyboardElements = alphabet.split("").map((letter, index) => (
-        <button key={letter}
-                onClick={() => addGuessedLetter(letter)}
-                    >{letter.toUpperCase()}
+    const keyboardElements = alphabet.split("").map(letter => {
+        const isGuessed = guessedLetter.includes(letter)
+        const isCorrect = isGuessed && currentWord.includes(letter)
+        const isWrong = isGuessed && !currentWord.includes(letter)
+        const className = clsx({
+            //Add class "correct" if isCorrect is true
+            correct: isCorrect,
+            //Add class "wrong" if isWrong is true
+            wrong: isWrong
+    })
+    
+    console.log(className)
+    return (
+        <button
+            key={letter}
+            onClick={() => addGuessedLetter(letter)}
+            className={className}
+        >
+            {letter.toUpperCase()}
         </button>
-    ))
+    )
+})
+
+    //Display Guess Word
+    const letterElements = currentWord.split("").map((letter, index) => (
+                        <span className="letter" key={index}>
+                                {guessedLetter.includes(letter) ? letter.toUpperCase() : ""}
+                        </span>
+                    ))
     
     //Word Status
     const state = true
@@ -53,11 +77,7 @@ export default function App() {
           </section>
 
           <section className="word">
-                {currentWord.split("").map((letter, index) => (
-                        <span className="letter" key={index}>
-                                {letter.toUpperCase()}
-                        </span>
-                    ))}
+                {letterElements}
          </section>
 
          <section className='keyboard' >

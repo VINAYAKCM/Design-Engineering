@@ -124,6 +124,15 @@ header > p {
     transform: scale(0.97);
 }
 
+
+.keyboard > button.correct {
+    background-color: #10A95B;
+}
+
+.keyboard > button.wrong {
+    background-color: #EC5D49;
+}
+
 .new-game {
     background-color: #084f11;
     color: white;
