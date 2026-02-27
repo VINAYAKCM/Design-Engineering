@@ -9,15 +9,25 @@ body {
     justify-content: center;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
 header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     margin-bottom: 20px;
 }
 
-header h1 {
+header > h1 {
     font-size: 1.25rem;
     font-family: Karla;
-    
     color: #F9F4DA;
     font-weight: 700;
 }
@@ -39,7 +49,7 @@ header > p {
   height: 52px;
 }
 
-.status h3 {
+.status > h3 {
     font-size: 18px;
     font-weight: 800;
     font-family: karla;
@@ -87,7 +97,53 @@ header > p {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
+ 
+.keyboard{
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    max-width: 450px;
+}
+
+.keyboard > button{
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: #adadad;
+    border: none;
+    cursor: pointer;
+
+    transition: 150ms ease-out;
+}
+
+.keyboard > button:active{
+    transform: scale(0.97);
+}
+
+.new-game {
+    background-color: #084f11;
+    color: white;
+    font-family: karla;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    width: 225px;
+    height: 40px;
+    padding: 6px 12px;
+    display: block;
+    margin-inline: auto;
+    cursor: pointer;
+
+    margin-top: 40px;
+
+    transition: 150ms ease-out;
+} 
+
+.new-game:active{
+    transform: scale(0.97);
+}

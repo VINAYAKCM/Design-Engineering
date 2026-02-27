@@ -4,8 +4,29 @@ import { languages } from '../languages'
 
 export default function App() {
 
-    const [currentWord, setCurrentWord] = useState("vampire")
+    const [currentWord, setCurrentWord] = useState("Blahblah")
+    const [guessedLetter, setGuessedLetter] = useState([])
+    console.log(guessedLetter)
+
+    //letter guess function
+    function addGuessedLetter(letter) {
+        setGuessedLetter(prevLetters => 
+            prevLetters.includes(letter) ? 
+                prevLetters : 
+                [...prevLetters, letter]
+        )
+    }
+
+    //Keyboard:
+    const alphabet = "abcdefghijklmnopqrstuvwxyz"
+    const keyboardElements = alphabet.split("").map((letter, index) => (
+        <button key={letter}
+                onClick={() => addGuessedLetter(letter)}
+                    >{letter.toUpperCase()}
+        </button>
+    ))
     
+    //Word Status
     const state = true
     const styles = {backgroundColor: state ? 'green' : 'red'}
 
@@ -21,7 +42,6 @@ export default function App() {
           <section className="status" style={styles}>
               <h3>{state ? "GAME WON!" : "Game over!"}</h3>
           </section>
-
           <section className='languages'>
               {languages.map(lang => (
                   <div className='lang' 
@@ -40,6 +60,11 @@ export default function App() {
                     ))}
          </section>
 
+         <section className='keyboard' >
+                    {keyboardElements}
+         </section>
+
+         <button className="new-game">New Game</button>
 
 
       </main>
